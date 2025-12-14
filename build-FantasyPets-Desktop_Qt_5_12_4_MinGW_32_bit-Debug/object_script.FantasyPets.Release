@@ -1,0 +1,17 @@
+release/main.o
+release/mainwindow.o
+release/need.o
+release/pettype.o
+release/pet.o
+release/action.o
+release/user.o
+release/savemanager.o
+release/welcomewindow.o
+release/userselectionwindow.o
+release/petselectionwindow.o
+release/petmanagementwindow.o
+release/moc_mainwindow.o
+release/moc_welcomewindow.o
+release/moc_userselectionwindow.o
+release/moc_petselectionwindow.o
+release/moc_petmanagementwindow.o

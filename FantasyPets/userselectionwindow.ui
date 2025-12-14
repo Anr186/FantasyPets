@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserSelectionWindow</class>
+ <widget class="QMainWindow" name="UserSelectionWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Выбор пользователя</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <spacer name="topSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string>QLabel {
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: rgba(45, 80, 22, 0.3);
+}</string>
+      </property>
+      <property name="text">
+       <string>Выбор пользователя</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="spacerBeforeList">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="listLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>80</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QListWidget" name="userListWidget">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>220</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>750</width>
+          <height>220</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QListWidget {
+    background-color: rgba(240, 250, 230, 0.95);
+    border: 2px solid #2d5016;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+QListWidget::item {
+    background-color: rgba(240, 230, 210, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 2px;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 45px;
+}
+QListWidget::item:selected {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #5a8c3a, stop:1 #2d5016);
+    color: white;
+    border: 1px solid #1a3009;
+    outline: none;
+}
+QListWidget::item:selected:focus {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #5a8c3a, stop:1 #2d5016);
+    color: white;
+    border: 2px solid #1a3009;
+    outline: none;
+}
+QListWidget::item:hover {
+    background-color: rgba(90, 140, 58, 0.3);
+    outline: none;
+}
+QListWidget:focus {
+    outline: none;
+    border: 2px solid #2d5016;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>80</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="spacerBeforeButtons">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="leftSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="selectButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #4a7c2a, stop:0.5 #2d5016, stop:1 #1a3009);
+    color: white;
+    border: 2px solid #1a3009;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+}
+QPushButton:hover:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #5a8c3a, stop:0.5 #3d7026, stop:1 #2d5016);
+    border: 2px solid #2d5016;
+}
+QPushButton:pressed:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #2d5016, stop:0.5 #1a3009, stop:1 #0f1a05);
+}
+QPushButton:disabled {
+    background-color: #888888;
+    color: #cccccc;
+    border: 2px solid #666666;
+}</string>
+        </property>
+        <property name="text">
+         <string>Выбрать</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="buttonSpacer1">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="newUserButton">
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6b9c4a, stop:0.5 #4a7c2a, stop:1 #2d5016);
+    color: white;
+    border: 2px solid #2d5016;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7bac5a, stop:0.5 #5a8c3a, stop:1 #3d7026);
+    border: 2px solid #3d7026;
+}
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #4a7c2a, stop:0.5 #2d5016, stop:1 #1a3009);
+}</string>
+        </property>
+        <property name="text">
+         <string>Новый пользователь</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="buttonSpacer2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteUserButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #8b3a3a, stop:0.5 #6b2a2a, stop:1 #4a1a1a);
+    color: white;
+    border: 2px solid #4a1a1a;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+}
+QPushButton:hover:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #9b4a4a, stop:0.5 #7b3a3a, stop:1 #5a2a2a);
+    border: 2px solid #5a2a2a;
+}
+QPushButton:pressed:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #6b2a2a, stop:0.5 #4a1a1a, stop:1 #2a0a0a);
+}
+QPushButton:disabled {
+    background-color: #888888;
+    color: #cccccc;
+    border: 2px solid #666666;
+}</string>
+        </property>
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="buttonSpacer3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="backButton">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7a6b4a, stop:0.5 #5a4a2a, stop:1 #3a2a1a);
+    color: white;
+    border: 2px solid #3a2a1a;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #8a7b5a, stop:0.5 #6a5a3a, stop:1 #4a3a2a);
+    border: 2px solid #4a3a2a;
+}
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #5a4a2a, stop:0.5 #3a2a1a, stop:1 #2a1a0a);
+}</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="rightSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="bottomSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

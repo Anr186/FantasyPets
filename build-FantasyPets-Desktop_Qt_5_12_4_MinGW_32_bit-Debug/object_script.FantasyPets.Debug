@@ -1,0 +1,17 @@
+debug/main.o
+debug/mainwindow.o
+debug/need.o
+debug/pettype.o
+debug/pet.o
+debug/action.o
+debug/user.o
+debug/savemanager.o
+debug/welcomewindow.o
+debug/userselectionwindow.o
+debug/petselectionwindow.o
+debug/petmanagementwindow.o
+debug/moc_mainwindow.o
+debug/moc_welcomewindow.o
+debug/moc_userselectionwindow.o
+debug/moc_petselectionwindow.o
+debug/moc_petmanagementwindow.o

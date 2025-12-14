@@ -1,0 +1,90 @@
+{
+    "users": [
+        {
+            "name": "Андрей",
+            "pets": [
+                {
+                    "birthDate": "2025-12-13T20:15:20",
+                    "boughtRooms": [
+                        1
+                    ],
+                    "coins": 0,
+                    "currentRoom": 1,
+                    "health": 100,
+                    "hunger": 59,
+                    "hungerDecayRate": 1,
+                    "mood": 100,
+                    "name": "Макс",
+                    "sleep": 59,
+                    "sleepDecayRate": 1,
+                    "type": 1,
+                    "typeDescription": "Благородный грифон - смесь орла и льва. Очень активный и игривый питомец.",
+                    "typeName": "Грифон"
+                },
+                {
+                    "birthDate": "2025-12-13T20:26:18",
+                    "boughtRooms": [
+                        1
+                    ],
+                    "coins": 15,
+                    "currentRoom": 0,
+                    "health": 100,
+                    "hunger": 51,
+                    "hungerDecayRate": 1,
+                    "mood": 100,
+                    "name": "Кеша",
+                    "sleep": 74,
+                    "sleepDecayRate": 1,
+                    "type": 2,
+                    "typeDescription": "Волшебный единорог с магическим рогом. Нежный и дружелюбный, но требует заботы.",
+                    "typeName": "Единорог"
+                },
+                {
+                    "birthDate": "2025-12-13T20:26:29",
+                    "boughtRooms": [
+                        1
+                    ],
+                    "coins": 10,
+                    "currentRoom": 1,
+                    "health": 70,
+                    "hunger": 0,
+                    "hungerDecayRate": 1,
+                    "mood": 0,
+                    "name": "Саша",
+                    "sleep": 25,
+                    "sleepDecayRate": 1,
+                    "type": 0,
+                    "typeDescription": "Могущественный дракон с огненным дыханием. Любит играть и требует много внимания.",
+                    "typeName": "Дракон"
+                },
+                {
+                    "babyAvaPath": "C:/Users/admin/Desktop/3 kurs/Kurs/FantasyPets/img/Custom-ava.jpg",
+                    "babyImagePath": "C:/Users/admin/Desktop/3 kurs/Kurs/FantasyPets/img/Custom-baby.jpg",
+                    "bigAvaPath": "C:/Users/admin/Desktop/3 kurs/Kurs/FantasyPets/img/Custom-big-ava.jpg",
+                    "bigImagePath": "C:/Users/admin/Desktop/3 kurs/Kurs/FantasyPets/img/Custom-big.jpg",
+                    "birthDate": "2025-12-13T23:52:20",
+                    "boughtRooms": [
+                        1
+                    ],
+                    "coins": 155,
+                    "currentRoom": 1,
+                    "health": 75,
+                    "hunger": 92,
+                    "hungerDecayRate": 1,
+                    "mood": 100,
+                    "name": "Гриша",
+                    "sleep": 92,
+                    "sleepDecayRate": 1,
+                    "type": 3,
+                    "typeDescription": "",
+                    "typeName": "Гриша"
+                }
+            ]
+        },
+        {
+            "name": "Катя",
+            "pets": [
+            ]
+        }
+    ]
+}

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PetSelectionWindow</class>
+ <widget class="QMainWindow" name="PetSelectionWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Выбор питомца</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <spacer name="topSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+        <weight>99</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string>QLabel {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #9966ff, stop:0.5 #aa88ff, stop:1 #cc99ff);
+    color: #000000;
+    font-weight: 900;
+    border: 3px solid #aa88ff;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 18px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Выбор питомца</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="petScrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>300</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="petCardsContainer">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>680</width>
+         <height>280</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="petCardsLayout">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <spacer name="spacerBeforeButtons">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="leftSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="selectButton">
+        <property name="text">
+         <string>Выбрать</string>
+        </property>
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00ff88, stop:0.5 #00cc66, stop:1 #009944);
+    color: #ffffff;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+QPushButton:hover:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00ffaa, stop:0.5 #00ff88, stop:1 #00cc66);
+    border: 2px solid #00ffff;
+}
+QPushButton:pressed:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00cc66, stop:0.5 #009944, stop:1 #006633);
+}
+QPushButton:disabled {
+    background-color: #444444;
+    color: #888888;
+    border: 2px solid #666666;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="buttonSpacer1">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="newPetButton">
+        <property name="text">
+         <string>Создать питомца</string>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>160</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00ffcc, stop:0.5 #00cc99, stop:1 #009966);
+    color: #ffffff;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00ffff, stop:0.5 #00ffcc, stop:1 #00cc99);
+    border: 2px solid #00ffff;
+}
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #00cc99, stop:0.5 #009966, stop:1 #006644);
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="buttonSpacer2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deletePetButton">
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff0066, stop:0.5 #cc0044, stop:1 #990033);
+    color: #ffffff;
+    border: 2px solid #ff00aa;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+QPushButton:hover:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff0088, stop:0.5 #ff0066, stop:1 #cc0044);
+    border: 2px solid #ff00ff;
+}
+QPushButton:pressed:enabled {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #cc0044, stop:0.5 #990033, stop:1 #660022);
+}
+QPushButton:disabled {
+    background-color: #444444;
+    color: #888888;
+    border: 2px solid #666666;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="buttonSpacer3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="backButton">
+        <property name="text">
+         <string>Назад</string>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #9966ff, stop:0.5 #7744cc, stop:1 #552299);
+    color: #ffffff;
+    border: 2px solid #aa88ff;
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #aa88ff, stop:0.5 #9966ff, stop:1 #7744cc);
+    border: 2px solid #cc99ff;
+}
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #7744cc, stop:0.5 #552299, stop:1 #331166);
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="rightSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="bottomSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+
